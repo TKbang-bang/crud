@@ -1,33 +1,19 @@
 import React, { useState } from "react";
 import "./app.css";
-import axios from "axios";
-import All from "./components/All";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Add from "./components/Add";
+import Edit from "./components/Edit";
 
 function App() {
-  const [txt, setTxt] = useState("");
-
-  const handleAdd = async (e) => {
-    e.preventDefault();
-    try {
-      axios.post("http://localhost:3000/add", { txt });
-    } catch (error) {
-      console.log(error);
-    }
-    setTxt("");
-  };
-
   return (
-    <div className="container">
-      <form onSubmit={handleAdd}>
-        <input
-          type="text"
-          onChange={(e) => setTxt(e.target.value)}
-          value={txt}
-        />
-        <button type="submit">Agregar</button>
-      </form>
-      <All />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/add" element={<Add />} />
+        <Route path="/edit" element={<Edit />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

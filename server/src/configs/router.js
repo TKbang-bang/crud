@@ -21,4 +21,9 @@ router.post("/add", (req, res) => {
   );
 });
 
+router.post("/id/", (req, res) => {
+  console.log(req.body);
+  res.send("Hola");
+});
+
 module.exports = router;

@@ -12,16 +12,126 @@ body{
   position: absolute;
   top: 50%;
   left: 50%;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   transform: translate(-50%, -50%);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: .5rem;
+  padding: 1rem .5rem;
+  width: 28rem;
+  max-height: 30rem;
+  background-color: #2f0640;
+  color: #fff;
+  border-radius: .3rem;
 }
 
-.container form{
+.container .hd{
+  /* border: 1px solid #000; */
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #5f0f82;
+  padding: .5rem;
+  border-radius: .5rem;
+}
+
+.container .hd a{
+  text-decoration: none;
+  display: block;
+  background-color: #00a000;
+  padding: .5rem;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.container .all{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1rem 0;
+  width: 100%;
+  gap: .7rem;
+}
+
+.container .all .single{
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  width: 100%;
+  padding: .8rem .3rem .8rem .3rem;
+  background-color: #7a0f82;
+  border-radius: .2rem;
+}
+
+.container .all .single p{
+  grid-column: 1/7;
+  /* border: 1px solid #fff; */
+}
+
+.container .all .single div{
+  grid-column: 7/-1;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: .2rem;
+}
+
+.container .all .single div a{
+  background: none;
+  border: none;
+  color: #7a0f82;
+  height: 100%;
+  border-radius: .2rem;
+  display: grid;
+  place-items: center;
+  font-size: .8rem;
+  text-decoration: none;
+}
+
+.container .all .single div .e{
+  background-color: greenyellow;
+}
+
+.container .all .single div .b{
+  background-color: red;
+}
+
+.container .cont{
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  width: 100%;
+  gap: 1rem;
+}
+
+.container .cont input{
+  height: 2.5rem;
+  font-size: 1rem;
+  padding-left: .5rem;
+  background-color: #7a0f82;
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+.container .cont input:focus{
+  border: 1px solid #fff;
+  border-radius: .2rem;
+}
+
+.container .cont input::placeholder{
+  color: #ffffffb9;
+}
+
+.container .cont button{
+  height: 2.5rem;
+  background-color: #16a216;
+  color: #fff;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* .container form{
   width: 25rem;
   display: flex;
   justify-content: center;
@@ -68,7 +178,7 @@ body{
 
 .container .all .single div{
   width: 5rem;
-  /* border: 1px solid #000; */
+  border: 1px solid #000;
   height: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -88,4 +198,4 @@ body{
 
 .container .all .single div .d{
   background-color: red;
-}
+} */
